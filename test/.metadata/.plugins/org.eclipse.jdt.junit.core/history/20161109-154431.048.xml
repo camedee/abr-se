@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="NoeudTest" project="CORDA_SE" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="NoeudTest" time="0.0">
+    <testcase name="testGetPere" classname="NoeudTest" time="0.0"/>
+    <testcase name="testGetL_fils" classname="NoeudTest" time="0.0"/>
+    <testcase name="testGetR_fils" classname="NoeudTest" time="0.0"/>
+    <testcase name="testGetValeur" classname="NoeudTest" time="0.0"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,51 @@
+
+public class ABR {
+	private Noeud root;
+	private int nbE;
+	
+	public ABR(){
+		this.root=null;
+		this.nbE=0;
+	}
+	
+	public void insert(Noeud noeud){
+		if (this.root==null){
+			this.root=noeud;
+			this.nbE=1;
+		}else{
+			Noeud father=this.root;
+			boolean test=false;
+			while(!test){
+				if (noeud.getValeur()<father.getValeur()){
+					if (father.getL_fils()==null){
+						test=true;
+					}else{
+						father=father.getL_fils();
+					}
+				}else{
+					if (father.getR_fils()==null){
+						test=true;
+					}else{
+						father=father.getR_fils();
+					}
+				}
+			}
+			if (noeud.getValeur()<father.getValeur()){
+				father.setL_fils(noeud);
+				noeud.setPere(father);
+			}else{
+				father.setR_fils(noeud);
+				noeud.setPere(father);
+			}
+			this.nbE+=1;
+		}
+	}
+	
+	public boolean isEmpty(){
+		return this.root==null;
+	}
+	
+	public int nbElements(){
+		return this.nbE;
+	}
+}

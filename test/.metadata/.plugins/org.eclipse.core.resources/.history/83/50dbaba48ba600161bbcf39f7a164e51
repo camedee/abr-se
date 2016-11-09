@@ -1,0 +1,18 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ABRTest {
+	/**
+	 * Test method for {@link ABR#isEmpty()}.
+	 */
+	@Test
+	public void testIsEmpty(){
+		ABR a=new ABR();
+		assertTrue(a.isEmpty());
+		Noeud n=new Noeud(13);
+		a.insert(n);
+		assertFalse(a.isEmpty());
+	}
+
+}
